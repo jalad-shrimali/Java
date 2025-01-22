@@ -53,18 +53,27 @@ public class Array {
         System.out.println("input");
         for(int row = 0; row < arr.length; row++){
             for(int col=0;col<arr[row].length;col++){
-                arr[row][col] = sc.nextInt();
+                // assigning random values using Math class
+                arr[row][col] = (int)(Math.random()*10);
             }
         }
         //output a two d array
         System.out.println("output");
-        for(int row = 0; row< arr.length;row++){
+//        for(int row = 0; row< arr.length;row++){
 //            for (int col = 0; col<arr[row].length;col++){
 //                System.out.print(arr[row][col]+" ");
 //            }
 //            System.out.println();
             //another way
-            System.out.println(Arrays.toString(arr[row]));
+//            System.out.println(Arrays.toString(arr[row]));
+//        }
+
+        // enhanced for loop for output
+        for(int n[] : arr){ // n[] is an array that takes values from arr(array)
+            for(int m:n){ // here m takes values from n
+                System.out.print(m + " ");
+            }
+            System.out.println();
         }
         sc.close();
     }
